@@ -1,0 +1,17 @@
+- type: entity
+  id: Player
+  description: "A player."
+  components:
+    - type: Eye
+      # This directly controls draw resolution.
+      zoom: 1.0, 1.0
+      drawFov: false
+    - type: Input
+      context: "player"
+#    - type: Sprite
+#      texture: Constructible/Tiles/white.png
+#    - type: PointLight
+#      radius: 16
+#      energy: 1
+#      offset: "0, 0"
+#      color: "#FFFFFF"

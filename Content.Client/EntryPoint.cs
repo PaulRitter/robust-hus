@@ -1,4 +1,5 @@
 using Robust.Client.Interfaces;
+using Robust.Client.Interfaces.Graphics.Lighting;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Interfaces.Configuration;
 using Robust.Shared.Interfaces.GameObjects;
@@ -14,6 +15,7 @@ namespace Content.Client
     {
         [Dependency] private readonly IBaseClient _baseClient = default!;
         [Dependency] private readonly IGameController _gameController = default!;
+        [Dependency] private readonly ILightManager _lightManager = default!;
         
         public override void Init()
         {
@@ -45,6 +47,8 @@ namespace Content.Client
         {
             base.PostInit();
 
+            _lightManager.Enabled = false;
+            
             // >:D
             if (_gameController.LaunchState.FromLauncher)
             {

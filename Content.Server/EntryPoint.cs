@@ -29,6 +29,8 @@ namespace Content.Server
         public override void PostInit()
         {
             base.PostInit();
+            
+            IoCManager.Resolve<ExperienceManager>().Initialize();
             // DEVNOTE: Can also initialize IoC stuff more here.
         }
 
