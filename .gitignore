@@ -4,3 +4,4 @@ obj/
 .DS_Store
 # banish KDE
 .directory
+.idea
